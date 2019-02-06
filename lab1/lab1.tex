@@ -1,0 +1,100 @@
+\documentclass{article}
+\usepackage[utf8]{inputenc}
+\usepackage[margin=1in]{geometry}
+\usepackage{hyperref}
+\usepackage{bm}
+\usepackage{multirow}
+\usepackage{placeins}
+\usepackage{natbib}
+\usepackage{graphicx}
+
+\title{Assignment 1: Evaluation Lab}
+\author{
+    Luise Dürlich\\
+    \href{mailto:luise.durlich.9577@student.uu.se}{luise.durlich.9577@student.uu.se}
+    \and
+    Xiajing Li\\
+    \href{mailto:xiajing.li.4688@student.uu.se}{xiajing.li.4688@student.uu.se}
+    \and
+    Chun Hung Lin\\
+    \href{mailto:chlin3@kth.se}{chlin3@kth.se}
+}
+\date{\today}
+
+\begin{document}
+
+\maketitle
+
+\section{System description}
+The intended system is a smartphone application that can be used to make appointments with a doctor at a local hospital. In order to improve the efficiency of this system, it is designed to use a dialogue system for interaction. The user interacts with the system in spoken dialog where the system is supposed to respond to desired dates and time slots, give feedback on whether or not a slot is already taken and finally execute and confirm the booking. The purpose of this system thus amounts to: \textbf{(1)} providing understandable dialogue interaction with users and \textbf{(2)} responding with an appointment (date and doctor) which correctly matches the users' health problem and time requirements or constraints (if given). This system focuses on Swedish users only, so the language in the dialogue is Swedish.
+\vspace{0.5cm}
+
+\noindent Since generally a medical appointment is made with regards to more or less ordinary concerns, cases that would normally lead to emergency calls are not included in this dialogue system.
+
+\section{Evaluation methods}
+To measure the quality of our system, we propose user a impersonation evaluation method to capture both the effectiveness of the system as well as the general user satisfaction based on a survey of test users. As regards system effectiveness, we simply check the correctness of answers given by the system. By considering the users' satisfaction given the response, as well as the appropriateness, fluency and coherence of the dialogue process, we measure the overall satisfaction. This also means that the users' personal preference about the given date or doctor is not taken into consideration.
+\vspace{0.5cm}
+
+\noindent Consequently, we first use part of the training data (the records of real calls) for evaluation. By comparing the replies given by the system and the real reply in the record, we would grade the effectiveness. Then, volunteers are invited to simulate real call situations with this system and, following the simulation, to do a survey to evaluate both the effectiveness and satisfaction.
+\paragraph{User selection}
+Users in this evaluation will cover different groups based on background by age, sex, hometown and given health problem. The system needs to recognize different accents of Swedish so the users will also cover common dialects from south to north.
+\paragraph{Environment}
+We set up the evaluation case in different scenarios based on the decibel noise levels of the background noise. Scenarios include: a busy street, the subway, home and an office. Considering that we assume people to generally prefer to make a call in private environment, we will have more evaluation cases at home and in the office.
+\paragraph{System}
+Since it is a rather small system with clear objective, we prefer to test the system as a whole. A survey will be done when the user finishes his or her dialogue with the system. Language recognition, the actual appointment making process as well as the satisfaction with dialogue and synthesis will be covered in the survey.
+\paragraph{Process}
+We first recruit a group of volunteers to do the user impersonation with this system. The time and turns of their dialogue are also recorded. In the test, we arrange a specific appointment date and time for each user or tester. Then we immediately do a survey on each user's interaction experience. The survey will be divided into four parts: 
+\begin{enumerate}
+    \item The user's background information, including the user's age, sex, language background and health problem in the call; 
+    \item The effectiveness of the appointment making itself measured by yes/no questions such as: Did you successfully make an appointment? Did you make an appointment on the given date and time? Were you satisfied with the response time for the system?
+    \item Grading the system: users are asked to judge the response quality on a scale of 1 to 5 (where 5 is the most positive) through the following questions: Was the synthesis understandable? Was the synthesis appropriate? Was the dialogue human-like? Did the system clearly state the time of the appointment? Did you get confirmation? Did you get feedback on preferred dates? How do you feel about the interaction between the system and yourself?
+    \item A few open-ended questions like: Any comments on the dialogue system? Any advice on the dialogue system? 
+\end{enumerate}
+Then we have another group of volunteers to do the human evaluation on the records in the first group. The questions in the survey are the same for the purpose of inter-rater agreement. 
+\paragraph{Metric}
+%Just making this up as I go... please do add comments/criticism!
+
+We deem the system useful, if it meets two requirements: \textbf{(1)} the user experiments result in successful appointment making within a reasonable amount of time in at least 2/3 of the cases and
+\textbf{(2)} the mean scores of the questions about the system qualities (part 3 of the survey described above, where 5 is the highest score) are greater than 4. %(questions are scored from 1 to 5).
+\vspace{0.5cm}
+
+\noindent Concerning the reliability of the scores given by the users, we further plan to apply an inter-rater measure such as Cohen's Kappa to the survey results of users in the first group (those interacting with the system) and users of the second group (judging the record of the first group) on the same conversation. We would hope to achieve at least moderate agreement (a kappa score of 0.4).
+\vspace{0.5cm}
+
+\noindent To gain a more objective measure on conversation efficiency, we evaluate the number of turns taken by the user during conversation with the system and compare against the number of turns in conversation with a real person from the training data.
+\section{Design Choice Motivations}
+\paragraph{User selection} Selecting users with different backgrounds reflects the need for diverse voice samples and this tests the robustness of the dialogue system.
+% in order to train the recognizer as well as for different scenarios for the choice of doctors
+% and urgency of the problem.
+\paragraph{Environment} The test environments are set with varying levels of background noise, so as to familiarize the recognizer with the different surroundings, the system might be used in. 
+\paragraph{System}
+The system is relatively small and we do not see much use in breaking down the system and testing each component individually. As for the version of the system being evaluated, the beta version or the version of the system with all designed features should be tested. A large scale evaluation should not be conducted on a prototype or a system with unimplemented features.
+\paragraph{Process}
+First, we collect the background information of users in order to have a valid background variable control of the evaluation of the system. For example, we can drop the scores given by non-target users.\\
+\\
+Secondly, we let the testers have a survey evaluation on the dialogue system for the performance and the usability. %Scored questions increase the robustness of the evaluation and the open-ended questions broaden our interested scope. 
+Scored questions increase the robustness of the evaluation whereas open-ended questions provide insights beyond the scope of what we considered in terms of system design.\\
+\\
+Lastly, we invite another group of volunteers to evaluate the conversation records since  we would like to get some more objective and intersubjective feedback on system performance.
+
+\paragraph{Metric}
+A dialogue system should be considered as successful if it is able to give users a preferable or expected appointment when the time slot is available or direct the user to get an appointment time slot as close as possible to their expected time. \\
+\\
+We measure the duration for the appointment because a long duration of making an appointment would be considered inefficient and annoying. Typically we would set 5 minutes as a reasonable amount of time for making an appointment. We expect to encounter some extreme cases in the evaluation test and therefore more than 2/3 cases within the reasonable amount of time could be considered as success. We might expect such extreme cases, where a lot of time is taken to make an appointment, e.g. when users give ambiguous commands and the response time of users is very long. In comparison to appointment making between humans,  evaluating the number of turns taken by a user can reveal, if in general more user input is requested by the system which might hint at the dialogue being inefficient.\\
+\\
+The mean scores of the questions indicate different qualities of the system and each of them is crucial in a good dialogue system. Therefore, we need all of them above 4 to consider the system to be good enough.
+	%3. define different test cases (how severe is disease?)introduce preferred dates, schedules for system
+
+	%4. Users: different groups (age, sex, BUT focus one specific dialect (Stockholm) for simplicity)
+
+	%5. Environment: Different scenarios: Busy street, Subway, home, office
+
+	%6. System to test: system as a whole (Recognition, actual appointment making, dialogue and synthesis)(because we have a clear objective)
+	
+	%7. Questions to ask: Did you successfully make an appointment? Understandability of synthesis? Did the system clearly state the time of the appointment? Did you get confirmation? Did you get feedback on preferred dates?
+	
+    %8. Metric: 
+
+
+
+\end{document}
