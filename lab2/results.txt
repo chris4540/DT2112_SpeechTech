@@ -1,0 +1,373 @@
+﻿#### four_digit
+====================== HTK Results Analysis =======================
+  Date: Tue Feb  5 10:09:21 2019
+  Ref : Sp2/testprompts.mlf
+  Rec : results/model_Sp1_test_Sp2_grammar_four_digits/recognized.mlf
+------------------------ Overall Results --------------------------
+SENT: %Correct=40.00 [H=4, S=6, N=10]
+WORD: %Corr=80.00, Acc=75.00 [H=32, D=2, S=6, I=2, N=40]
+------------------------ Confusion Matrix -------------------------
+       e   f   f   n   o   s   s   t   t   z
+       i   i   o   i   n   e   i   h   w   e
+       g   v   u   n   e   v   x   r   o   r
+       h   e   r   e       e       e       o
+       t                   n       e          Del [ %c / %e]
+eigh   1   0   0   0   0   0   2   0   0   0    1 [33.3/5.0]
+five   0   4   0   0   0   0   0   0   0   0    0
+four   0   0   3   0   0   0   0   0   0   0    0
+nine   0   1   0   5   0   0   0   0   0   0    0 [83.3/2.5]
+ one   0   0   0   0   2   0   0   0   0   0    0
+seve   0   0   0   0   0   2   0   0   0   0    0
+ six   0   0   0   0   0   0   9   0   0   0    0
+thre   0   0   0   0   0   0   1   3   0   0    1 [75.0/2.5]
+ two   0   0   0   0   0   0   0   2   1   0    0 [33.3/5.0]
+zero   0   0   0   0   0   0   0   0   0   2    0
+Ins    1   0   0   0   0   0   0   0   1   0
+===================================================================
+
+====================== HTK Results Analysis =======================
+  Date: Tue Feb  5 10:09:42 2019
+  Ref : Sp3/testprompts.mlf
+  Rec : results/model_Sp1_test_Sp3_grammar_four_digits/recognized.mlf
+------------------------ Overall Results --------------------------
+SENT: %Correct=0.00 [H=0, S=10, N=10]
+WORD: %Corr=50.00, Acc=47.50 [H=20, D=1, S=19, I=1, N=40]
+------------------------ Confusion Matrix -------------------------
+       e   f   o   s   s   t
+       i   o   n   e   i   h
+       g   u   e   v   x   r
+       h   r       e       e
+       t           n       e  Del [ %c / %e]
+eigh   5   0   0   0   2   0    0 [71.4/5.0]
+five   0   2   0   0   1   0    0 [ 0.0/7.5]
+four   0   6   0   0   0   0    0
+nine   0   1   0   0   0   0    0 [ 0.0/2.5]
+ one   0   1   2   0   2   0    0 [40.0/7.5]
+seve   0   0   0   1   1   0    0 [50.0/2.5]
+ six   0   0   0   0   4   0    0
+thre   0   0   0   1   0   2    0 [66.7/2.5]
+ two   0   2   0   0   1   1    1 [ 0.0/10.0]
+zero   0   0   0   2   1   1    0 [ 0.0/10.0]
+Ins    0   1   0   0   0   0
+===================================================================
+
+
+
+
+====================== HTK Results Analysis =======================
+  Date: Tue Feb  5 10:10:04 2019
+  Ref : Sp1/testprompts.mlf
+  Rec : results/model_Sp2_test_Sp1_grammar_four_digits/recognized.mlf
+------------------------ Overall Results --------------------------
+SENT: %Correct=50.00 [H=5, S=5, N=10]
+WORD: %Corr=75.00, Acc=75.00 [H=30, D=0, S=10, I=0, N=40]
+------------------------ Confusion Matrix -------------------------
+       e   f   f   o   s   s   t   t   z
+       i   i   o   n   e   i   h   w   e
+       g   v   u   e   v   x   r   o   r
+       h   e   r       e       e       o
+       t               n       e          Del [ %c / %e]
+eigh   3   0   0   0   1   0   0   0   0    0 [75.0/2.5]
+five   0   1   0   0   0   0   0   0   0    0
+four   0   0   3   0   0   0   0   0   0    0
+nine   0   0   0   3   3   0   0   0   0    0 [ 0.0/15.0]
+ one   0   0   0   6   0   0   0   0   0    0
+seve   0   0   0   0   8   0   0   0   0    0
+ six   0   0   0   0   0   4   0   0   0    0
+thre   0   0   0   0   0   0   3   0   0    0
+ two   0   0   0   0   1   0   0   1   0    0 [50.0/2.5]
+zero   0   0   0   0   2   0   0   0   1    0 [33.3/5.0]
+Ins    0   0   0   0   0   0   0   0   0
+===================================================================
+
+====================== HTK Results Analysis =======================
+  Date: Tue Feb  5 10:10:30 2019
+  Ref : Sp3/testprompts.mlf
+  Rec : results/model_Sp2_test_Sp3_grammar_four_digits/recognized.mlf
+------------------------ Overall Results --------------------------
+SENT: %Correct=0.00 [H=0, S=10, N=10]
+WORD: %Corr=65.00, Acc=60.00 [H=26, D=2, S=12, I=2, N=40]
+------------------------ Confusion Matrix -------------------------
+       e   f   f   o   s   s   t   t
+       i   i   o   n   e   i   h   w
+       g   v   u   e   v   x   r   o
+       h   e   r       e       e
+       t               n       e      Del [ %c / %e]
+eigh   4   0   0   0   0   1   1   0    1 [66.7/5.0]
+five   2   1   0   0   0   0   0   0    0 [33.3/5.0]
+four   0   0   6   0   0   0   0   0    0
+nine   0   0   0   1   0   0   0   0    0 [ 0.0/2.5]
+ one   0   0   0   5   0   0   0   0    0
+seve   0   0   0   0   2   0   0   0    0
+ six   0   0   0   0   0   4   0   0    0
+thre   0   0   0   0   0   0   3   0    0
+ two   0   0   0   0   1   0   2   1    1 [25.0/7.5]
+zero   0   0   0   0   2   0   2   0    0 [ 0.0/10.0]
+Ins    1   0   0   0   0   0   1   0
+===================================================================
+
+====================== HTK Results Analysis =======================
+  Date: Tue Feb  5 10:11:43 2019
+  Ref : Sp1/testprompts.mlf
+  Rec : results/model_Sp3_test_Sp1_grammar_four_digits/recognized.mlf
+------------------------ Overall Results --------------------------
+SENT: %Correct=40.00 [H=4, S=6, N=10]
+WORD: %Corr=72.50, Acc=72.50 [H=29, D=0, S=11, I=0, N=40]
+------------------------ Confusion Matrix -------------------------
+       e   f   f   n   o   s   s   t   z
+       i   i   o   i   n   e   i   h   e
+       g   v   u   n   e   v   x   r   r
+       h   e   r   e       e       e   o
+       t                   n       e      Del [ %c / %e]
+eigh   4   0   0   0   0   0   0   0   0    0
+five   0   1   0   0   0   0   0   0   0    0
+four   0   0   3   0   0   0   0   0   0    0
+nine   2   0   0   2   0   1   0   1   0    0 [33.3/10.0]
+ one   1   2   0   0   3   0   0   0   0    0 [50.0/7.5]
+seve   0   0   0   0   0   8   0   0   0    0
+ six   0   0   0   0   0   0   4   0   0    0
+thre   0   0   0   0   0   1   0   2   0    0 [66.7/2.5]
+ two   1   0   0   0   0   1   0   0   0    0 [ 0.0/5.0]
+zero   0   0   0   0   0   1   0   0   2    0 [66.7/2.5]
+Ins    0   0   0   0   0   0   0   0   0
+===================================================================
+
+====================== HTK Results Analysis =======================
+  Date: Tue Feb  5 10:11:54 2019
+  Ref : Sp2/testprompts.mlf
+  Rec : results/model_Sp3_test_Sp2_grammar_four_digits/recognized.mlf
+------------------------ Overall Results --------------------------
+SENT: %Correct=0.00 [H=0, S=10, N=10]
+WORD: %Corr=52.50, Acc=50.00 [H=21, D=1, S=18, I=1, N=40]
+------------------------ Confusion Matrix -------------------------
+       e   f   f   s   s   t   z
+       i   i   o   e   i   w   e
+       g   v   u   v   x   o   r
+       h   e   r   e           o
+       t           n              Del [ %c / %e]
+eigh   4   0   0   0   0   0   0    0
+five   0   4   0   0   0   0   0    0
+four   0   0   1   0   0   0   2    0 [33.3/5.0]
+nine   1   0   0   2   2   0   0    1 [ 0.0/12.5]
+ one   1   1   0   0   0   0   0    0 [ 0.0/5.0]
+seve   0   0   0   1   0   1   0    0 [50.0/2.5]
+ six   1   0   0   0   8   0   0    0 [88.9/2.5]
+thre   1   0   0   3   0   1   0    0 [ 0.0/12.5]
+ two   0   0   0   1   1   1   0    0 [33.3/5.0]
+zero   0   0   0   0   0   0   2    0
+Ins    1   0   0   0   0   0   0
+===================================================================
+
+#### digit_loop
+====================== HTK Results Analysis =======================
+  Date: Mon Feb  4 01:54:12 2019
+  Ref : Sp3/testprompts.mlf
+  Rec : results/model_Sp1_test_Sp3_grammar_digit_loop/recognized.mlf
+------------------------ Overall Results --------------------------
+SENT: %Correct=0.00 [H=0, S=10, N=10]
+WORD: %Corr=47.50, Acc=10.00 [H=19, D=0, S=21, I=15, N=40]
+------------------------ Confusion Matrix -------------------------
+       e   f   o   s   s   t   t   z
+       i   o   n   e   i   h   w   e
+       g   u   e   v   x   r   o   r
+       h   r       e       e       o
+       t           n       e          Del [ %c / %e]
+eigh   5   0   0   0   1   0   1   0    0 [71.4/5.0]
+five   1   1   0   0   0   1   0   0    0 [ 0.0/7.5]
+four   0   6   0   0   0   0   0   0    0
+nine   0   0   0   0   0   1   0   0    0 [ 0.0/2.5]
+ one   0   1   2   0   1   1   0   0    0 [40.0/7.5]
+seve   0   0   0   0   1   1   0   0    0 [ 0.0/5.0]
+ six   0   0   0   0   4   0   0   0    0
+thre   0   0   0   1   0   2   0   0    0 [66.7/2.5]
+ two   0   0   0   0   1   4   0   0    0 [ 0.0/12.5]
+zero   0   2   0   0   0   2   0   0    0 [ 0.0/10.0]
+Ins    2   5   0   1   6   0   0   1
+===================================================================
+
+
+====================== HTK Results Analysis =======================
+  Date: Mon Feb  4 01:55:07 2019
+  Ref : Sp2/testprompts.mlf
+  Rec : results/model_Sp1_test_Sp2_grammar_digit_loop/recognized.mlf
+------------------------ Overall Results --------------------------
+SENT: %Correct=20.00 [H=2, S=8, N=10]
+WORD: %Corr=80.00, Acc=47.50 [H=32, D=0, S=8, I=13, N=40]
+------------------------ Confusion Matrix -------------------------
+       e   f   f   n   o   s   s   t   t   z
+       i   i   o   i   n   e   i   h   w   e
+       g   v   u   n   e   v   x   r   o   r
+       h   e   r   e       e       e       o
+       t                   n       e          Del [ %c / %e]
+eigh   1   0   0   0   0   0   1   1   1   0    0 [25.0/7.5]
+five   0   4   0   0   0   0   0   0   0   0    0
+four   0   0   3   0   0   0   0   0   0   0    0
+nine   0   1   0   5   0   0   0   0   0   0    0 [83.3/2.5]
+ one   0   0   0   0   2   0   0   0   0   0    0
+seve   0   0   0   0   0   2   0   0   0   0    0
+ six   0   0   0   0   0   0   9   0   0   0    0
+thre   0   0   0   0   0   0   0   4   1   0    0 [80.0/2.5]
+ two   0   0   0   0   0   0   0   3   0   0    0 [ 0.0/7.5]
+zero   0   0   0   0   0   0   0   0   0   2    0
+Ins    3   0   1   0   0   0   4   3   2   0
+===================================================================
+
+
+====================== HTK Results Analysis =======================
+  Date: Mon Feb  4 01:55:48 2019
+  Ref : Sp2/testprompts.mlf
+  Rec : results/model_Sp2_test_Sp2_grammar_digit_loop/recognized.mlf
+------------------------ Overall Results --------------------------
+SENT: %Correct=90.00 [H=9, S=1, N=10]
+WORD: %Corr=97.50, Acc=97.50 [H=39, D=0, S=1, I=0, N=40]
+------------------------ Confusion Matrix -------------------------
+       e   f   f   n   o   s   s   t   t   z
+       i   i   o   i   n   e   i   h   w   e
+       g   v   u   n   e   v   x   r   o   r
+       h   e   r   e       e       e       o
+       t                   n       e          Del [ %c / %e]
+eigh   4   0   0   0   0   0   0   0   0   0    0
+five   0   4   0   0   0   0   0   0   0   0    0
+four   0   0   3   0   0   0   0   0   0   0    0
+nine   0   0   0   6   0   0   0   0   0   0    0
+ one   0   0   0   0   2   0   0   0   0   0    0
+seve   0   0   0   0   0   2   0   0   0   0    0
+ six   0   0   0   0   0   0   9   0   0   0    0
+thre   0   0   0   0   0   0   0   5   0   0    0
+ two   0   0   0   0   0   0   0   1   2   0    0 [66.7/2.5]
+zero   0   0   0   0   0   0   0   0   0   2    0
+Ins    0   0   0   0   0   0   0   0   0   0
+===================================================================
+
+
+====================== HTK Results Analysis =======================
+  Date: Mon Feb  4 01:56:20 2019
+  Ref : Sp3/testprompts.mlf
+  Rec : results/model_Sp2_test_Sp3_grammar_digit_loop/recognized.mlf
+------------------------ Overall Results --------------------------
+SENT: %Correct=0.00 [H=0, S=10, N=10]
+WORD: %Corr=67.50, Acc=60.00 [H=27, D=1, S=12, I=3, N=40]
+------------------------ Confusion Matrix -------------------------
+       e   f   f   o   s   s   t   t
+       i   i   o   n   e   i   h   w
+       g   v   u   e   v   x   r   o
+       h   e   r       e       e
+       t               n       e      Del [ %c / %e]
+eigh   5   0   0   0   0   1   1   0    0 [71.4/5.0]
+five   2   1   0   0   0   0   0   0    0 [33.3/5.0]
+four   0   0   6   0   0   0   0   0    0
+nine   0   0   0   1   0   0   0   0    0 [ 0.0/2.5]
+ one   0   0   0   5   0   0   0   0    0
+seve   0   0   0   0   2   0   0   0    0
+ six   0   0   0   0   0   4   0   0    0
+thre   0   0   0   0   0   0   3   0    0
+ two   0   0   0   0   1   0   2   1    1 [25.0/7.5]
+zero   0   0   0   0   2   0   2   0    0 [ 0.0/10.0]
+Ins    1   0   0   0   0   0   1   1
+===================================================================
+
+====================== HTK Results Analysis =======================
+  Date: Mon Feb  4 01:57:20 2019
+  Ref : Sp1/testprompts.mlf
+  Rec : results/model_Sp2_test_Sp1_grammar_digit_loop/recognized.mlf
+------------------------ Overall Results --------------------------
+SENT: %Correct=30.00 [H=3, S=7, N=10]
+WORD: %Corr=75.00, Acc=70.00 [H=30, D=2, S=8, I=2, N=40]
+------------------------ Confusion Matrix -------------------------
+       e   f   f   o   s   s   t   t   z
+       i   i   o   n   e   i   h   w   e
+       g   v   u   e   v   x   r   o   r
+       h   e   r       e       e       o
+       t               n       e          Del [ %c / %e]
+eigh   3   0   0   0   0   0   0   0   0    1
+five   0   1   0   0   0   0   0   0   0    0
+four   0   0   3   0   0   0   0   0   0    0
+nine   0   0   0   3   2   0   1   0   0    0 [ 0.0/15.0]
+ one   0   0   0   6   0   0   0   0   0    0
+seve   0   0   0   0   8   0   0   0   0    0
+ six   0   0   0   0   0   4   0   0   0    0
+thre   0   0   0   0   0   0   3   0   0    0
+ two   0   0   0   0   1   0   0   1   0    0 [50.0/2.5]
+zero   0   0   0   0   1   0   0   0   1    1 [50.0/2.5]
+Ins    0   0   0   0   1   1   0   0   0
+===================================================================
+
+====================== HTK Results Analysis =======================
+  Date: Mon Feb  4 01:58:39 2019
+  Ref : Sp3/testprompts.mlf
+  Rec : results/model_Sp3_test_Sp3_grammar_digit_loop/recognized.mlf
+------------------------ Overall Results --------------------------
+SENT: %Correct=80.00 [H=8, S=2, N=10]
+WORD: %Corr=97.50, Acc=95.00 [H=39, D=0, S=1, I=1, N=40]
+------------------------ Confusion Matrix -------------------------
+       e   f   f   n   o   s   s   t   t   z
+       i   i   o   i   n   e   i   h   w   e
+       g   v   u   n   e   v   x   r   o   r
+       h   e   r   e       e       e       o
+       t                   n       e          Del [ %c / %e]
+eigh   7   0   0   0   0   0   0   0   0   0    0
+five   0   3   0   0   0   0   0   0   0   0    0
+four   0   0   6   0   0   0   0   0   0   0    0
+nine   0   0   0   1   0   0   0   0   0   0    0
+ one   0   0   0   0   5   0   0   0   0   0    0
+seve   0   0   0   0   0   2   0   0   0   0    0
+ six   0   0   0   0   0   0   4   0   0   0    0
+thre   0   0   0   0   0   1   0   2   0   0    0 [66.7/2.5]
+ two   0   0   0   0   0   0   0   0   5   0    0
+zero   0   0   0   0   0   0   0   0   0   4    0
+Ins    0   0   0   0   0   1   0   0   0   0
+===================================================================
+
+
+====================== HTK Results Analysis =======================
+  Date: Mon Feb  4 01:58:59 2019
+  Ref : Sp1/testprompts.mlf
+  Rec : results/model_Sp3_test_Sp1_grammar_digit_loop/recognized.mlf
+------------------------ Overall Results --------------------------
+SENT: %Correct=10.00 [H=1, S=9, N=10]
+WORD: %Corr=72.50, Acc=47.50 [H=29, D=0, S=11, I=10, N=40]
+------------------------ Confusion Matrix -------------------------
+       e   f   f   n   o   s   s   t   t   z
+       i   i   o   i   n   e   i   h   w   e
+       g   v   u   n   e   v   x   r   o   r
+       h   e   r   e       e       e       o
+       t                   n       e          Del [ %c / %e]
+eigh   4   0   0   0   0   0   0   0   0   0    0
+five   0   1   0   0   0   0   0   0   0   0    0
+four   0   0   3   0   0   0   0   0   0   0    0
+nine   2   0   0   1   0   1   0   1   1   0    0 [16.7/12.5]
+ one   0   2   0   0   4   0   0   0   0   0    0 [66.7/5.0]
+seve   0   0   0   0   0   8   0   0   0   0    0
+ six   0   0   0   0   0   1   3   0   0   0    0 [75.0/2.5]
+thre   1   0   0   0   0   0   0   2   0   0    0 [66.7/2.5]
+ two   1   0   0   0   0   0   0   0   1   0    0 [50.0/2.5]
+zero   0   0   0   0   0   1   0   0   0   2    0 [66.7/2.5]
+Ins    4   2   0   0   0   2   2   0   0   0
+===================================================================
+
+====================== HTK Results Analysis =======================
+  Date: Mon Feb  4 01:59:23 2019
+  Ref : Sp2/testprompts.mlf
+  Rec : results/model_Sp3_test_Sp2_grammar_digit_loop/recognized.mlf
+------------------------ Overall Results --------------------------
+SENT: %Correct=0.00 [H=0, S=10, N=10]
+WORD: %Corr=55.00, Acc=27.50 [H=22, D=1, S=17, I=11, N=40]
+------------------------ Confusion Matrix -------------------------
+       e   f   f   s   s   t   z
+       i   i   o   e   i   w   e
+       g   v   u   v   x   o   r
+       h   e   r   e           o
+       t           n              Del [ %c / %e]
+eigh   4   0   0   0   0   0   0    0
+five   0   4   0   0   0   0   0    0
+four   1   0   1   0   0   0   1    0 [33.3/5.0]
+nine   2   0   0   1   1   1   0    1 [ 0.0/12.5]
+ one   1   1   0   0   0   0   0    0 [ 0.0/5.0]
+seve   0   0   0   2   0   0   0    0
+ six   1   0   0   0   8   0   0    0 [88.9/2.5]
+thre   5   0   0   0   0   0   0    0 [ 0.0/12.5]
+ two   0   0   0   1   1   1   0    0 [33.3/5.0]
+zero   0   0   0   0   0   0   2    0
+Ins    3   1   0   2   2   2   1
+===================================================================
+
