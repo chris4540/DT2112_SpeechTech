@@ -43,14 +43,27 @@
     representing a short term power spectrum of speech. The size of the 
     feature vectors represented by MFC method is 39 typically. 
 
-    In HMM-based ASR, the speech parameter vectors is a series of observation
-    states for training the HMM models. Each HMM model corresponds to one 
-    linguistic units such as a word.
+    In HMM-based ASR, the speech parameter vectors is a series of observations
+    for training the HMM models. Each HMM model corresponds to one word.
     
-    The acoustic model is a representation of the relationship between a speech
-    signal and a segment. Usually, each phoneme has three segments. 
+    The acoustic model is a representation of the relationship between feature 
+    vectors (observations) and subphonemes (hidden states).
+    Typically, each phoneme has three subphonemes. The Hidden Markov Model with 
+    Gaussian Mixture Models are used as the acoustic model in HMM-based ASR.
 
-    % The language models are...
+    The HMMs for different words are trained and we compare the model likelihoods
+    by forward-backward algorithm for isolated words recognition. For continuous
+    speech recognition, we join our word models with the silent state and use viterbi 
+    algorithm to decode words from speech.
+
+    The language model is to provide the information about the prior probability
+    of the word sequence $P(word)$. A language model is able to disambiguate between
+    similar acoustics when combining linguistic knowledge and acoustic evidence.
+    % For example, "ice cream" and "I scream" can be disambiguated with the language
+    % model even though their pronunciation are the same.
+    
+    In HMM-based ASR, n-gram model is used as the language model and it is trained
+    on millions of words of text.
     % an N-best list 
 \end{problem}
 
