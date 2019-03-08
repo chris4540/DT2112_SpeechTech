@@ -17,6 +17,7 @@
 \usepackage{pgfplotstable}
 \usepackage{booktabs}
 
+
 \setlength{\parindent}{1em}
 \setlength{\parskip}{.3em}
 
@@ -36,15 +37,27 @@
 
 \section{Automatic speech recognition and human perception}
 \begin{problem}{1.1}
-    The parametrization is ...
+    A speech parametrization is for extracting the feature vectors or 
+    the speech parameter vectors from speech signal. In the speech parametrization,
+    the mel-frequency cepstrum coefficients (MFCCs) are most likely used for
+    representing a short term power spectrum of speech. The size of the 
+    feature vectors represented by MFC method is 39 typically. 
 
-    The acoustic models are...
+    In HMM-based ASR, the speech parameter vectors is a series of observation
+    states for training the HMM models. Each HMM model corresponds to one 
+    linguistic units such as a word.
+    
+    The acoustic model is a representation of the relationship between a speech
+    signal and a segment. Usually, each phoneme has three segments. 
+
+    % The language models are...
+    % an N-best list 
 \end{problem}
 
 
 \begin{problem}{1.2}
     The parametrization is ...
-
+    
     The acoustic models are...
 \end{problem}
 
