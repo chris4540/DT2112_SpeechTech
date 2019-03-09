@@ -106,5 +106,33 @@
     TODO
 \end{problem}
 
+\begin{problem}{2.1}
+    In formant synthesis, speech output is parameterized by formant frequencies,
+    fundamental frequency, their amplitudes, and noise levels etc. as a function 
+    of time. Formant speech synthesis is based on rules which describe
+    the resonant frequencies of the vocal tract.
+
+    In unit selection synthesis, the output speech is synthesized by selecting 
+    appropriate speech units from large databases of recorded speech. 
+    The speech units can be phone, diphone, half-phones or words.
+
+    In diphone synthesis, speech is generated from a database which contains 
+    every diphone within the language. 
+    Rather using a large database including all speech units in unit selection
+    synthesis, diphone synthesis only uses diphone as its basic unit.
+
+    In HMM-based synthesis, the frequency spectrum, 
+    fundamental frequency (F0), and duration of speech 
+    are modeled simultaneously by HMMs. 
+    Speech are created based on the maximum likelihood estimation of state transitions.
+
+    HMM-based synthesis is not concatenating different recordings 
+    as unit selection synthesis and diphone synthesis but generating speech parameters
+    from the HMM models. And then a speech is synthesized from the generated parameters.
+
+    During the systhesis phrase, unit selection synthesis is serial while HMM-based
+    systhesis is parallel.
+\end{problem}
+
 
 \end{document}
