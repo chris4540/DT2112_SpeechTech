@@ -64,7 +64,15 @@
     
     In HMM-based ASR, n-gram model is used as the language model and it is trained
     on millions of words of text.
+    
     % an N-best list 
+    The N-Best list is a list contains N ranked possible decoding for the speech
+    from the user.
+
+    The reason why developers would like to get an N-best list as an ASR result
+    is the top hypothesis may be erroneous and may not fit the content of a 
+    dialogue system and the correct hypothesis is often in the N-best list. 
+    Therefore, the N-best list can increase the robusness of a dialogue system.
 \end{problem}
 
 
