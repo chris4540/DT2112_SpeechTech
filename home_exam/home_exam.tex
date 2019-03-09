@@ -56,7 +56,7 @@
     speech recognition, we join our word models with the silent state and use viterbi 
     algorithm to decode words from speech.
 
-    The language model is to provide the information about the prior probability
+    The language model is to provide the information about the priori probability
     of the word sequence $P(word)$. A language model is able to disambiguate between
     similar acoustics when combining linguistic knowledge and acoustic evidence.
     % For example, "ice cream" and "I scream" can be disambiguated with the language
@@ -83,15 +83,27 @@
     lower pitch and less discriminative at higher pitch and therefore the mel
     filterbank varies linearly below 1kHz and logarithmically above 1kHz.
     
-    For the acoustic models, ...
-    For the language models, ...
-    For the N-best list, ...
+    For the acoustic model, the hidden markov model considers the transition
+    probability of a phoneme (state) to a phoneme or staying on one phoneme. 
+    It is in the same way as a proficient language user that understanding 
+    what a particular speech should sound like in relation to adjoining sounds.
+    Humans would probabay understand a speech as a series of phonemes instead of
+    phonemes independently.
+
+    The language models gives the priori probability of a certain word in a 
+    particular context given the adjoining words. It is similar to how human 
+    guess a homophone word since human can guess the word by the converstation
+    content and the regularity of the word based on the knowledge and understanding
+    of a certain language.
+
+    Since human and machine make error, the best guess of a word or a sentence may
+    be erroneous. Human would perpare a list of guess of a speech and choose the 
+    best fit word or sentence given the converstation content and the intention
+    of the speaker. The n-best lists can be considered as an imitation of this behavior. 
 \end{problem}
 
 \begin{problem}{1.3}
-    The parametrization is ...
-
-    The acoustic models are...
+    TODO
 \end{problem}
 
 
