@@ -17,12 +17,9 @@
 \usepackage{pgfplotstable}
 \usepackage{booktabs}
 
+% \setlength{\parindent}{1em}
+\setlength{\parskip}{.5em}
 
-\setlength{\parindent}{1em}
-\setlength{\parskip}{.3em}
-
-% \newcommand{\N}{\mathbb{N}}
-% \newcommand{\Z}{\mathbb{Z}}
 \newcommand\numberthis{\addtocounter{equation}{1}\tag{\theequation}}
 % \newcommand*\descriptionlabel[1]{\hspace\leftmargin$#1$}
 \def\printemptyline#1{\def\par{\ifvmode\emptyline\fi\endgraf}\obeylines}
@@ -134,5 +131,65 @@
     systhesis is parallel.
 \end{problem}
 
+\begin{problem}{2.2}
+
+    % co-articulation yes, as in diphone
+    Co-articulation means speech sounds tend to be influenced by other speech 
+    sounds surronding them.
+    Diphone synthesis is able to capture this transition from one phonic unit 
+    to another unit.
+    Therefore, unit selection synthesis is able to do the same thing that as 
+    diphone synthesis.
+
+    The co-articulation is perfectly retained in the diphone or larger 
+    units. 
+    Therefore the unit selection synthesis can completely reproduce 
+    the co-articulation in synthesized speechs.
+    
+
+    % speech reduction
+    Speech reduction means a speaker skips or changes some syllables when talking
+    at normal speed. Unit selection synthesis can do the speech reduction at 
+    some degree and it depends on the speech data in database and how to annotate 
+    the text with phonetic units. 
+    For example, "Jag vet inte" in written Swedish is spoken as "javende". If
+    the database have this phrase, then the synthesis can correct pronounce it
+    correctly. On the other hand, if the database does not have this phrase, 
+    we have to annotate phonetic units correctly. However, the way to annotate
+    phonetic units is case-by-case and it also depends on the context of the 
+    conversation.
+
+    For human speakers, it is a natual action for native speakers and it depends
+    on the knowledge to that language of the speakers.
+
+    % hesitation
+    For classical speech systhesis, it is hard to find any hesitations like 
+    a pause or an "ehm" since it is from text to speech. 
+    If we want to add hesitations in unit
+    selection synthesis, we can add an extra module to analyze which part of the 
+    sentence would easily have a pause or an "emmmm" and then add hesitations with
+    a low frequency.
+
+    To compare with human speakers, the hesitations in the speech systhesis system
+    may not be very natural since the analysis module can go wrong. Another point
+    is hesitations is closely related to the conversation context and therefore
+    human listeners may not feel natual to the hesitation.
+    % using a random frequency to add a pause may not be very natual to humans.
+
+    % word repetition
+    In speech systhesis, word repetition would not happen since the systhesis
+    system "translates" text to speech programmatically. Also, the speech data in
+    the database is from a group of professional speakers and the data has quality control.
+    Therefore it is hard to find word repetition in unit selection synthesis.
+
+    To add word repetition, we can add a module to consider where should have 
+    word repetition such as the main topic of the sentence or the difficult words
+    in the sentence and then create word repetition in the systhesised speech according
+    to the analysis result.
+
+    In unit selection synthesis, the word repetition is expected as a rare event
+    since the synthesized speech sounds like from a professional speaker and therefore
+    the word repetition phenomenon should not be very frequent.
+\end{problem}
 
 \end{document}
