@@ -34,23 +34,23 @@
 
 \section{Automatic speech recognition and human perception}
 \begin{problem}{1.1}
-    A speech parametrization is for extracting the feature vectors or 
+    A speech parametrization is for extracting the feature vectors or
     the speech parameter vectors from speech signal. In the speech parametrization,
     the mel-frequency cepstrum coefficients (MFCCs) are most likely used for
-    representing a short term power spectrum of speech. The size of the 
-    feature vectors represented by MFC method is 39 typically. 
+    representing a short term power spectrum of speech. The size of the
+    feature vectors represented by MFC method is 39 typically.
 
     In HMM-based ASR, the speech parameter vectors is a series of observations
     for training the HMM models. Each HMM model corresponds to one word.
-    
-    The acoustic model is a representation of the relationship between feature 
+
+    The acoustic model is a representation of the relationship between feature
     vectors (observations) and subphonemes (hidden states).
-    Typically, each phoneme has three subphonemes. The Hidden Markov Model with 
+    Typically, each phoneme has three subphonemes. The Hidden Markov Model with
     Gaussian Mixture Models are used as the acoustic model in HMM-based ASR.
 
     The HMMs for different words are trained and we compare the model likelihoods
     by forward-backward algorithm for isolated words recognition. For continuous
-    speech recognition, we join our word models with the silent state and use viterbi 
+    speech recognition, we join our word models with the silent state and use viterbi
     algorithm to decode words from speech.
 
     The language model is to provide the information about the priori probability
@@ -58,45 +58,45 @@
     similar acoustics when combining linguistic knowledge and acoustic evidence.
     % For example, "ice cream" and "I scream" can be disambiguated with the language
     % model even though their pronunciation are the same.
-    
+
     In HMM-based ASR, n-gram model is used as the language model and it is trained
     on millions of words of text.
-    
-    % an N-best list 
+
+    % an N-best list
     The N-Best list is a list contains N ranked possible decoding for the speech
     from the user.
 
     The reason why developers would like to get an N-best list as an ASR result
-    is the top hypothesis may be erroneous and may not fit the content of a 
-    dialogue system and the correct hypothesis is often in the N-best list. 
+    is the top hypothesis may be erroneous and may not fit the content of a
+    dialogue system and the correct hypothesis is often in the N-best list.
     Therefore, the N-best list can increase the robusness of a dialogue system.
 \end{problem}
 
 
 \begin{problem}{1.2}
     For the speech parametrization, MFCC is based on human hearing perceptions or
-    in other words is to mimic known variation of the critical bands of 
-    human ears to different frequencies. Human ears are more discriminative at 
+    in other words is to mimic known variation of the critical bands of
+    human ears to different frequencies. Human ears are more discriminative at
     lower pitch and less discriminative at higher pitch and therefore the mel
     filterbank varies linearly below 1kHz and logarithmically above 1kHz.
-    
+
     For the acoustic model, the hidden markov model considers the transition
-    probability of a phoneme (state) to a phoneme or staying on one phoneme. 
-    It is in the same way as a proficient language user that understanding 
+    probability of a phoneme (state) to a phoneme or staying on one phoneme.
+    It is in the same way as a proficient language user that understanding
     what a particular speech should sound like in relation to adjoining sounds.
     Humans would probabay understand a speech as a series of phonemes instead of
     phonemes independently.
 
-    The language models gives the priori probability of a certain word in a 
-    particular context given the adjoining words. It is similar to how human 
+    The language models gives the priori probability of a certain word in a
+    particular context given the adjoining words. It is similar to how human
     guess a homophone word since human can guess the word by the converstation
     content and the regularity of the word based on the knowledge and understanding
     of a certain language.
 
     Since human and machine make error, the best guess of a word or a sentence may
-    be erroneous. Human would perpare a list of guess of a speech and choose the 
+    be erroneous. Human would perpare a list of guess of a speech and choose the
     best fit word or sentence given the converstation content and the intention
-    of the speaker. The n-best lists can be considered as an imitation of this behavior. 
+    of the speaker. The n-best lists can be considered as an imitation of this behavior.
 \end{problem}
 
 \begin{problem}{1.3}
@@ -105,25 +105,25 @@
 
 \begin{problem}{2.1}
     In formant synthesis, speech output is parameterized by formant frequencies,
-    fundamental frequency, their amplitudes, and noise levels etc. as a function 
+    fundamental frequency, their amplitudes, and noise levels etc. as a function
     of time. Formant speech synthesis is based on rules which describe
     the resonant frequencies of the vocal tract.
 
-    In unit selection synthesis, the output speech is synthesized by selecting 
-    appropriate speech units from large databases of recorded speech. 
+    In unit selection synthesis, the output speech is synthesized by selecting
+    appropriate speech units from large databases of recorded speech.
     The speech units can be phone, diphone, half-phones or words.
 
-    In diphone synthesis, speech is generated from a database which contains 
-    every diphone within the language. 
+    In diphone synthesis, speech is generated from a database which contains
+    every diphone within the language.
     Rather using a large database including all speech units in unit selection
     synthesis, diphone synthesis only uses diphone as its basic unit.
 
-    In HMM-based synthesis, the frequency spectrum, 
-    fundamental frequency (F0), and duration of speech 
-    are modeled simultaneously by HMMs. 
+    In HMM-based synthesis, the frequency spectrum,
+    fundamental frequency (F0), and duration of speech
+    are modeled simultaneously by HMMs.
     Speech are created based on the maximum likelihood estimation of state transitions.
 
-    HMM-based synthesis is not concatenating different recordings 
+    HMM-based synthesis is not concatenating different recordings
     as unit selection synthesis and diphone synthesis but generating speech parameters
     from the HMM models. And then a speech is synthesized from the generated parameters.
 
@@ -134,39 +134,39 @@
 \begin{problem}{2.2}
 
     % co-articulation yes, as in diphone
-    Co-articulation means speech sounds tend to be influenced by other speech 
+    Co-articulation means speech sounds tend to be influenced by other speech
     sounds surronding them.
-    Diphone synthesis is able to capture this transition from one phonic unit 
+    Diphone synthesis is able to capture this transition from one phonic unit
     to another unit.
-    Therefore, unit selection synthesis is able to do the same thing that as 
+    Therefore, unit selection synthesis is able to do the same thing that as
     diphone synthesis.
 
-    The co-articulation is perfectly retained in the diphone or larger 
-    units. 
-    Therefore the unit selection synthesis can completely reproduce 
+    The co-articulation is perfectly retained in the diphone or larger
+    units.
+    Therefore the unit selection synthesis can completely reproduce
     the co-articulation in synthesized speechs.
-    
+
 
     % speech reduction
     Speech reduction means a speaker skips or changes some syllables when talking
-    at normal speed. Unit selection synthesis can do the speech reduction at 
-    some degree and it depends on the speech data in database and how to annotate 
-    the text with phonetic units. 
+    at normal speed. Unit selection synthesis can do the speech reduction at
+    some degree and it depends on the speech data in database and how to annotate
+    the text with phonetic units.
     For example, "Jag vet inte" in written Swedish is spoken as "javende". If
     the database have this phrase, then the synthesis can correct pronounce it
-    correctly. On the other hand, if the database does not have this phrase, 
+    correctly. On the other hand, if the database does not have this phrase,
     we have to annotate phonetic units correctly. However, the way to annotate
-    phonetic units is case-by-case and it also depends on the context of the 
+    phonetic units is case-by-case and it also depends on the context of the
     conversation.
 
     For human speakers, it is a natual action for native speakers and it depends
     on the knowledge to that language of the speakers.
 
     % hesitation
-    For classical speech systhesis, it is hard to find any hesitations like 
-    a pause or an "ehm" since it is from text to speech. 
+    For classical speech systhesis, it is hard to find any hesitations like
+    a pause or an "ehm" since it is from text to speech.
     If we want to add hesitations in unit
-    selection synthesis, we can add an extra module to analyze which part of the 
+    selection synthesis, we can add an extra module to analyze which part of the
     sentence would easily have a pause or an "emmmm" and then add hesitations with
     a low frequency.
 
@@ -182,7 +182,7 @@
     the database is from a group of professional speakers and the data has quality control.
     Therefore it is hard to find word repetition in unit selection synthesis.
 
-    To add word repetition, we can add a module to consider where should have 
+    To add word repetition, we can add a module to consider where should have
     word repetition such as the main topic of the sentence or the difficult words
     in the sentence and then create word repetition in the systhesised speech according
     to the analysis result.
@@ -209,10 +209,10 @@
 \begin{problem}{4.1}
     Steps to make a data collection
     \begin{enumerate}
-        \item Consider the purpose of the collected data. The purpose may be 
+        \item Consider the purpose of the collected data. The purpose may be
         studying some linguistic behavior or making a speech recognition system.
         \item Design or determine data collection environment, equipments and technology.
-        E.g. slient lab, telephone, or meeting room environment. 
+        E.g. slient lab, telephone, or meeting room environment.
         What equipments would be used? What audio format should be used?
         \item Participant recruitment.
         \item Collect data of participant: name, gender, age, education, country born or raised in.
@@ -232,25 +232,25 @@
     Important steps of the process of evaluation:
     \begin{enumerate}
         \item Determine the target or purpose of the evaluation. This affects what kind
-        of tests we need to do. For example, if we want to compare two 
-        speech synthesis systems, the grading test and the preference test will 
+        of tests we need to do. For example, if we want to compare two
+        speech synthesis systems, the grading test and the preference test will
         be helpful.
 
         \item User studies for representativeness. This is for controling the
         background varaibles in order to have a more representative evaluation
-        result.        
-        
-        \item Identify, select, and implement evaluation methods. 
-        It is mainly based on our purpose of the evaluation. For example, if the 
+        result.
+
+        \item Identify, select, and implement evaluation methods.
+        It is mainly based on our purpose of the evaluation. For example, if the
         purpose of evaluation is to compare the new system and the existing system,
         grading tests and preference tests should be selected as the evaluation
         tests. For the implementation, it is down to details like design the questionaire
         for the grading tests in order to have a good construct validity.
-                
+
         \item  Analyze and interpret results.
         There are multiple tasks related to this stage. Take a few tasks as examples.
         Calculating scores in the tests indicates the effectiveness of the speech system.
-        Summerizing the test results and identifying the reason why A system is 
+        Summerizing the test results and identifying the reason why A system is
         better than B system are the tasks should be done in this phrase. Moreover,
         the third party spectator can review the videos of the test period and it
         gives another point of view of interpreting the evaluation results.
@@ -263,23 +263,71 @@
     Speech Recognition system and speech Synthesis system are chosen for this
     discussion.
 
-    Speech Recognition:
+    For a research instiution, the target of evaluation is to test hypotheses.
 
-    research instiution; % Test hypotheses
-    metric: accuracy and compared with other hypotheses; 
-    data: the number of words in the test utterance and the number words correctly recognized.
+    In speech recognition, "good" means a modification perform better at some situation.
+    For example, they change the feature extraction scheme from MFCCs to a new method
+    and test if the accuracy of the new method is better than the MFCCs method.
+    The data they collect is the number of words in the test utterance and
+    the number words correctly recognized.
 
-    a research and development company; % company selling the underlying technology to service providers.
-    metric: how good the functionality of the speech recognition technology.
+    In speech systhesis, "good" can mean how user understand the synthesized speech
+    of a new speech systhesis system.
+    If the user can understand the context given by the synthesized speech, the
+    new speech systhesis system can be considered as good.
+    The data like the score of a listening comprehension test should be collected
+    for this purpose.
 
-    Producers:
+    To a R\&D company selling the underlying technology, the evaluation
+    target could be how the new technology better than the existing one. The 
+    evaluation can aslo be done on the current version and the old version of 
+    the application in order to see the progress of development.
 
-    End user; 
-    metric: how well the system meets their expectations.
-    % For a research instiution, the purpose of evaluation is to test hypothesis.
-    % For example, a group of researchers has a part of modification on the feature
+    In speech recognition, the company should compare accuracy across different 
+    recognition technologies. Moreover, the performance and the stability of different 
+    speech recognition technologies should be evaluated. The data like process time,
+    accuracy and performance across a population of speakers should be collected.
+
+    In speech systhesis, the data like intelligibility, smoothness, speed, and 
+    fluency of the syntheized speech to human listeners should be collected. 
+    Also, the performace and the computational resources like storage, computational
+    power needed for each technology should be evaluated.
+    The comparsion between two or more technologies on these asspects should be 
+    made and see how good the new technology is.
+
+    To a company selling the service to end users, the evaluation targets are
+    the completeness of the service and the cost of the services.
+    The evaluation for the completeness of the service is similar to the acceptance
+    testing. The evaluation of cost services can be obtained by checking hardware
+    cost, maintenance cost etc.
+
+    In speech recognition, the data like a list of expected functionalities that 
+    the application is able to acheive should be collected.
+
+    In speech systhesis, the completeness of expected functionalities acheived
+    should be collected. For example, we should check if the application is able
+    to produce a minimal pairs that skilled listeners can distinguish.
+
+    To an end user, the evaluation targets are functionality, user experience.
+    1. how can it complete the task 
+    2. does the application give a good user experience.
+    % Speech Recognition:
+
+    % research instiution; % Test hypotheses
+    % metric: accuracy and compared with other hypotheses;
+    % data: the number of words in the test utterance and the number words correctly recognized.
+
+    % a research and development company; % company selling the underlying technology to service providers.
+    % metric: how good the functionality of the speech recognition technology.
+
+    % Producers:
+
+    % End user;
+    % metric: how well the system meets their expectations.
+    % % For a research instiution, the purpose of evaluation is to test hypothesis.
+    % % For example, a group of researchers has a part of modification on the feature
     % extraction part of the speech recognition system. Therefore they would compare
-    % the current method and the improved method with objective evaluation like 
+    % the current method and the improved method with objective evaluation like
     % word accuracy for different feature extraction methods. If the new method has
     % a higher accuracy, then it is a strong evidence to show that the new method is better.
 
