@@ -248,7 +248,7 @@
 
     \end{enumerate}
 \end{problem}
-\pagebreak
+
 \begin{problem}{5.2}
     Speech Recognition system and speech Synthesis system are chosen for this
     discussion.
@@ -312,8 +312,103 @@
     Moreover, third party spectators would be needed in order to have a more objective
     evaluation results for the user experience.
 \end{problem}
+\pagebreak
+\begin{problem}{5.3}
+    Three academic research evaluations are selected. 
+    
+\noindent\textbf{Motivations}
 
-Lorem ipsum dolor sit  ~\citep{King2007}.
+    The first evaluation method is for evaluating the performance of a speech recognition 
+    method in a noisy condition. \cite{hirsch2000aurora} and 
+    the second and the third evaluation method are for a HMM-based speech synthesis system 
+    in Thai language \cite{chomphan2007implementation}. 
+    
+    The second evaluation method is to present the correctness of the synthesized
+    tone since Thai language is a tonal language and has five tones.
+    
+    The third method is to evaluate the syntheized speech quality.
+
+\noindent\textbf{Methods}
+
+    In the first evaluation method, they first prepared a speech data database 
+    for training and testing the speech recognition system.
+    The speechs in the database was first obtained from 
+    the corpus called TIdigits and then add 8 different real-world noises to 
+    the speech with different noise ratios \cite{hirsch2000aurora}.
+    After training the speech recognition system, the system tested with different
+    conditions test set and evaluate the performace based on word accuracy.
+
+    In the second method, they asked listeners to evaluate the correctness of the 
+    tone in a synthesized speechs syllable-by-syllable. \cite{tone_questions} 
+    
+    In the third task, they asked listeners to give the mean opinion score to 
+    the naturalness of synthesized speechs. After that, they asked listeners
+    to compare the naturalness of synthesized speechs from the HMM-based system and 
+    a unit-selection-based TTS system and then give the relative scores.    
+
+\noindent\textbf{Human judge involved or automatic measures}
+    
+    The first evaluate method is objective and could be done automatically since
+    all test data are from the corpus which means it should be labeled.
+
+    The second and the third evaluation method are subjective and involve human judges.
+    I would say that the second evaluation method is less subjective since 
+    distinguishing different pitches of speechs should be a common standard to
+    native speakers.
+
+\noindent\textbf{Critique}
+
+    In the first evaluation method, using the speech data beyond digits would 
+    be more representative since the corpus TIdigits has only speechs of
+    connected digit in American English. However, the cost of collecting speechs
+    will be high if they cannot find an existing corpus.
+
+    In the second method, a naive algorithm for compare tones should be used 
+    in order to have an objective result. For example, in a pair of speechs, 
+    one is systhesised and one is natural, align and normalize the syllable 
+    and calcuate the  moving average of the F0 frequency of the pair of syllable.
+    After that, compare their moving average frequency numerically.
+
+    In the third method, the questionaire that we can find online  mentions 
+    that the naturalness should be concerned. Adding more questions for different
+    aspects like understandable and speed may help to improve this evaluation.
+%     1. THE AURORA EXPERIMENTAL FRAMEWORK (asr2000_final_footer.pdf)
+% 2. Implementation and Evaluation of an HMM-based Thai Speech Synthesis 
+% 3. ITSPOKE: An Intelligent Tutoring Spoken Dialogue System
+
+% the main motivation behind this evaluation:
+% 1: evaluate the performance of speech recognition algorithms in noisy conditions
+% 2: evaluate the new purposed HMM synthesis system for Thai language.
+% 3: Evaluate a text-based tutorial dialogue system.
+
+% Describe the method:
+% 1: Prepare the source speech from TIdigits and then add noises to the corpus.
+%    Measure the recognition performance with word accuracy at different noise levels.
+% 2.1: Evaluate the tone correctness by comparing the F0 contour shapes of synthesized speechs and natural speech
+%    across 100 synthesized speech utterances.
+% 2.2: Evaluate the Speech Quality between the HMM-based system and the Vaja TTS system, a unit-selection-based TTS system.
+%     There are two types of subjective tests: Mean Opinion Score (MOS) and Comparison Category Rating (CCR) are used.
+%     In MOS test, listeners are required to evaluate ynthesized speechs in the overall aspect.
+%     In CCR test, pairs of speech samples from Vaja and HMMbased systems are scored  in naturalness, clearness, and
+% overall aspects
+% 3: 1. make students to read a samll document of background material
+%    2. pretest their physics knowledge
+%    3. use the dialogue system to work through 5 physics problems
+%    4. posttest physics knowledge.
+
+% Evaluation involve human judges, automatic measures, or both
+% 1: No human judge, automatic measures
+% 2.1: No human judge, automatic measures
+% 2.2: human judge
+% 3: human judges
+
+% suggest something that could improve the evaluation
+% 1. collect and use another group of data in more general speech, not digits. But expensive
+% 2. more aspects
+% 3. The evaluation is too emprical, only task successfulness are counted.
+%    Dialogue cost and user satisfaction should be included. # ref PARADISE: A Framework for Evaluating Spoken Dialogue Agents
+\end{problem}
+\pagebreak
 
 \bibliographystyle{IEEEtranN}
 \bibliography{ref}
