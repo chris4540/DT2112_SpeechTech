@@ -5,6 +5,8 @@
 \usepackage{enumerate}
 \usepackage[numbers]{natbib}
 \usepackage[hidelinks]{hyperref}
+\usepackage{csvsimple}
+% \usepackage{{}}
 
 % \setlength{\parindent}{1em}
 \setlength{\parskip}{.5em}
@@ -211,10 +213,21 @@
         \item Data analyze, quality checking, and/or audio data to text transcription
     \end{enumerate}
 \end{problem}
-
+\pagebreak
 \begin{problem}{4.2}
-    TODO
+    % Switchboard: https://catalog.ldc.upenn.edu/LDC97S62
+    % Columbia Games Corpus: http://www.cs.columbia.edu/speech/games-corpus/
+    % D64: http://www.uni-bielefeld.de/lili/personen/pwagner/papers/lrec10_oertel_etal.pdf
+    \begin{table}
+        \centering
+        \csvautotabular[respect dollar=false]{csv/task_4_2.csv}
+        \caption{Basic properties of the corpora}
+        \label{tbl:Q42_corpora_properties}    
+    \end{table}
+
+    The basic properties of the corpora can be found in Table \ref{tbl:Q42_corpora_properties}.
 \end{problem}
+\pagebreak
 % Question 5
 \begin{problem}{5.1}
     Important steps of the process of evaluation:
