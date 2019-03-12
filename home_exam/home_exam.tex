@@ -6,7 +6,6 @@
 \usepackage[numbers]{natbib}
 \usepackage[hidelinks]{hyperref}
 \usepackage{csvsimple}
-% \usepackage{{}}
 
 % \setlength{\parindent}{1em}
 \setlength{\parskip}{.5em}
@@ -220,12 +219,23 @@
     % D64: http://www.uni-bielefeld.de/lili/personen/pwagner/papers/lrec10_oertel_etal.pdf
     \begin{table}
         \centering
-        \csvautotabular[respect dollar=false]{csv/task_4_2.csv}
+        \csvautotabular[respect dollar=false]{csv/task_4_2_p1.csv}
         \caption{Basic properties of the corpora}
         \label{tbl:Q42_corpora_properties}    
     \end{table}
 
-    The basic properties of the corpora can be found in Table \ref{tbl:Q42_corpora_properties}.
+    \begin{table}
+        \centering
+        \csvautotabular[respect dollar=false]{csv/task_4_2_p2.csv}
+        \caption{Characteristic of the corpora}
+        \label{tbl:Q42_corpora_char}    
+    \end{table}
+
+    The basic properties of the corpora can be found in the Table \ref{tbl:Q42_corpora_properties}.
+
+    The Characteristic of the corpora can be found in the Table \ref{tbl:Q42_corpora_char}.
+
+    Purpose
 \end{problem}
 \pagebreak
 % Question 5
