@@ -92,6 +92,8 @@
     TODO
 \end{problem}
 
+\pagebreak
+
 \begin{problem}{2.1}
     In formant synthesis, speech output is parameterized by formant frequencies,
     fundamental frequency, their amplitudes, and noise levels etc. as a function
@@ -182,7 +184,39 @@
 \end{problem}
 
 \begin{problem}{2.3}
-    TODO
+    % The system should stop when received the voice commands like pause, stop,
+    % go to the next section, and go back to last section. Also, at the end of a 
+    % section and the end of the text book we should have a few seconds pause to 
+    % indicate that this is the end of a section. 
+    When the system is going to stop,
+    the system should say a few more syllables or the unit for the system. It 
+    makes the system more human-like. The system can be suddenly stopped but it 
+    will be very unnatural to human listener. The system can stop at the end of 
+    the processing sentence. However, some sentences would be very long and the 
+    system cannot within a short period of time.
+
+    When resuming speaking, go back to the begining of the sentence is a good 
+    choice since it gives the sense of integrity of the speech. Resuming at the 
+    point we stop is a little bit odd and strange to human. We can think that 
+    a human read out the speech would not simply starting from the word he/she stop.
+    A few word before the pause is sensible since most of the people will do it 
+    in the same way.
+
+    The first suggestion is to consider the syntheized speech as an audio file.
+    We mark the information like the time tag of the sentence start 
+    and the tags of few words for every syntheized speech. When we stop and resume
+    the reading system, the software just need to search the nearest time tag 
+    before the pasue point and then resume it in the same way.
+    This method is good because it is easy to understand and implement it.
+    The pause is human-like because it will be what we will do in the same 
+    situation.
+
+    The second suggestion is online re-synthesize the ending pharse 
+    (the few words after receiving the pause command) and the 
+    starting words (the few words before the puase point). The tone and the prosody
+    will be adjusted in this situation and therefore it is more human-like.
+
+    % TODO
 \end{problem}
 
 \pagebreak
