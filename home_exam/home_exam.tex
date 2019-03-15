@@ -137,87 +137,86 @@
 \pagebreak
 
 \begin{problem}{2.1}
-    In formant synthesis, speech output is parameterized by formant frequencies,
-    fundamental frequency, their amplitudes, and noise levels etc. as a function
-    of time. Formant speech synthesis is based on rules which describe
-    the resonant frequencies of the vocal tract.
-
-    In unit selection synthesis, the output speech is synthesized by selecting
-    appropriate speech units from large databases of recorded speech.
-    The speech units can be phone, diphone, half-phones or words.
-
-    In diphone synthesis, speech is generated from a database which contains
-    every diphone within the language.
-    Rather using a large database including all speech units in unit selection
-    synthesis, diphone synthesis only uses diphone as its basic unit.
-
-    In HMM-based synthesis, the frequency spectrum,
-    fundamental frequency (F0), and duration of speech
-    are modeled simultaneously by HMMs.
-    Speech are created based on the maximum likelihood estimation of state transitions.
-
-    HMM-based synthesis is not concatenating different recordings
-    as unit selection synthesis and diphone synthesis but generating speech parameters
-    from the HMM models. And then a speech is synthesized from the generated parameters.
-
-    During the systhesis phrase, unit selection synthesis is serial while HMM-based
-    systhesis is parallel.
+    In formant synthesis, speech output is parameterized by formant frequencies, 
+    fundamental frequency, their amplitudes, and noise levels etc. as a function of time. 
+    Formant speech synthesis is based on rules which describe the resonant frequencies 
+    of the vocal tract. 
+    
+    In unit selection synthesis, the output speech is synthesized by selecting 
+    appropriate speech units from large databases of recorded speech. 
+    The speech units can be phone, diphone, half-phones or words. 
+    
+    In diphone synthesis, speech is generated from a database which contains every 
+    diphone within the language. 
+    Rather using a large database including all speech units in unit selection 
+    synthesis, diphone synthesis only uses diphone as its basic unit. 
+    
+    In HMM-based synthesis, the frequency spectrum, fundamental frequency (F0), 
+    and duration of speech are modeled simultaneously by HMMs. 
+    Speech is created based on the maximum likelihood estimation of state transitions. 
+    HMM-based synthesis is not concatenating different recordings 
+    as unit selection synthesis and diphone synthesis but it generates speech parameters 
+    from the HMM models. 
+    Then a speech is synthesized from the generated parameters. 
+    
+    During the synthesis phase, unit selection synthesis is serial while 
+    HMM-based synthesis is in parallel.
 \end{problem}
 
 \begin{problem}{2.2}
 
     % co-articulation yes, as in diphone
-    Co-articulation means speech sounds tend to be influenced by other speech
-    sounds surronding them.
-    Diphone synthesis is able to capture this transition from one phonic unit
-    to another unit.
-    Therefore, unit selection synthesis is able to do the same thing that as
-    diphone synthesis.
-    The co-articulation is perfectly retained in the diphone or larger
-    units.
-    Therefore the unit selection synthesis can completely reproduce
-    the co-articulation in synthesized speechs.
+    Co-articulation means speech sounds tend to be influenced by other speech 
+    sounds surrounding them. 
+    Diphone synthesis is able to capture this transition from one phonic unit 
+    to another unit. 
+    Therefore, unit selection synthesis is able to do the same thing that as 
+    diphone synthesis. 
+    The co-articulation is perfectly retained in a diphone or a larger units.
+    Therefore the unit selection synthesis can completely reproduce the 
+    co-articulation in the synthetic speeches.
 
 
     % speech reduction
     Speech reduction means a speaker skips or changes some syllables when talking
-    at normal speed. Unit selection synthesis can do the speech reduction at
-    some degree and it depends on the speech data in database and how to annotate
-    the text with phonetic units.
-    For example, "Jag vet inte" in written Swedish is spoken as "javende". If
-    the database have this phrase, then the synthesis can correct pronounce it
-    correctly. On the other hand, if the database does not have this phrase,
-    we have to annotate phonetic units correctly. However, the way to annotate
-    phonetic units is case-by-case and it also depends on the context of the
-    conversation.
-    For human speakers, speech reduction is a natual action for native speakers
-    and it depends on the knowledge of the speakers on that language.
+    at normal speed. 
+    Unit selection synthesis can do the speech reduction at some degree and 
+    it depends on the speech data in the database and how to annotate the text 
+    with phonetic units. 
+    For example, ”Jag vet inte” in written Swedish is spoken as ”javende”. 
+    If the database has this phrase, then the synthesis can correctly pronounce 
+    it correctly. 
+    On the other hand, if the database does not have this phrase, we have to 
+    annotate phonetic units correctly. 
+    However, the way to annotate phonetic units is case-by-case and 
+    it also depends on the context of the conversation. 
+    Speech reduction is a natural action for native speakers
+    For second language speakers, it depends on the knowledge of the speaker 
+    on that language.
 
     % hesitation
-    For classical speech systhesis, it is hard to find any hesitations like
-    a pause or an "ehm" since it is from text to speech.
-    If we want to add hesitations in unit
-    selection synthesis, we can add an extra module to analyze which part of the
-    sentence would easily have a pause or an "emmmm" and then add hesitations with
-    a low frequency.
-    To compare with human speakers, the hesitations in the speech systhesis system
-    may not be very natural since the analysis module can go wrong. Another point
-    is hesitations is closely related to the conversation context and therefore
-    human listeners may not feel natual to the hesitation.
-    % using a random frequency to add a pause may not be very natual to humans.
+    For typical speech synthesis systems, it is hard to find any hesitations 
+    like a pause or an ”ehm” since it is from text to speech.
+    If we want to add hesitations in unit selection synthesis, we can add an 
+    extra module to analyze which part of the sentence would easily have a 
+    pause or an ”emmmm” and then add hesitations with a low frequency. 
+    To compare with human speakers, the hesitations in the speech synthesis 
+    system may not be very natural since the analysis module can go wrong. 
+    Another point is hesitations is closely related to the conversation context 
+    and therefore human listeners may not feel natural to the hesitation.
 
     % word repetition
-    In speech systhesis, word repetition would not happen since the systhesis
-    system "translates" text to speech programmatically. Also, the speech data in
-    the database is from a group of professional speakers and the data has quality control.
-    Therefore it is hard to find word repetition in unit selection synthesis.
-    To add word repetition, we can add a module to consider where should have
-    word repetition such as the main topic of the sentence or the difficult words
-    in the sentence and then create word repetition in the systhesised speech according
-    to the analysis result.
-    In unit selection synthesis, the word repetition is expected as a rare event
-    since the synthesized speech sounds like from a professional speaker and therefore
-    the word repetition in the system should not be frequent.
+    In speech synthesis, word repetitions would not happen since the synthesis 
+    system "translates" text to speech programmatically. 
+    Also, the speech data in the database is from a group of professional speakers
+    and the data has good quality control. 
+    Therefore it is hard to find word repetition in unit selection synthesis. 
+    To add word repetition, we can add a module to consider where we should have 
+    word repetitions (e.g. in the difficult words) and then create word repetitions 
+    in the synthesized speech according to the analysis result. 
+    In unit selection synthesis, word repetitions are expected as rare events 
+    since the synthesized speech sounds like from a professional speaker and 
+    therefore the word repetition in the system should not be frequent.
 \end{problem}
 
 \begin{problem}{2.3}
@@ -238,39 +237,45 @@
     % a human read out the speech would not simply starting from the word he/she stop.
     % A few word before the pause is sensible since most of the people will do it 
     % in the same way.
+    There are three ways to stop and resume the book reading system. 
+    The system can stop immediately, can stop a few words later, or stop until 
+    a clause or a segment of a sentence is completed when it received the stop command. 
+    
+    There are three corresponding ways to resume the system. 
+    The system can restart from the point it stopped, from a few words before 
+    the point it stopped, or from the beginning of the sentence where it stopped. 
+    
+    Three suggestions are given to simulate a human-like pause and resumption in
+    a unit selection synthesis.
 
-    There are three ways to stop and resume the book reading system. The system
-    can stop immediately, can stop few words later, or stop util a clause or 
-    a segment of a sentence is completed when it received the stop command. 
-
-    There are three cooresponding ways to resume the system. The system can restart
-    from the point it stopped, from a few word before the point it stopped, or
-    from the begining of the sentance where it stopped.    
-
-    The first suggestion is to consider the syntheized speech as an audio file.
-    We mark the information like the time tag of the sentence start 
-    and the tags of few words for every syntheized speech. When we stop and resume
-    the reading system, the software just need to search the nearest time tag 
-    before the pasue point and then resume it in the same way.
-    This method is good because it is easy to understand and implement it.
-    The pause is not quite human-like because we will not pasue it like a playing
-    machine.
-
-    The second suggestion is to online re-synthesize the ending pharse 
-    (the few words after receiving the pause command) and the 
-    starting words (the few words before the puase point). The tone and the prosody
-    will be adjusted in this situation and therefore it is more human-like.
-
+    The first suggestion is to consider the synthesized speech as an audio file.
+    We pause and resume the synthetic speech as what we do in a media player
+    application. We mark down the time to the audio file when we stop and resume
+    it back using the recorded time.
+    This method is good because it is easy to understand and implement it. 
+    The pause is not quite human-like because we will not pause it like a playing machine. 
+    
+    
+    The second suggestion is to online re-synthesize the ending phrase 
+    (the few words after receiving the pause command) and the starting words 
+    (the few words before the pause point). 
+    The tone and the prosody will be adjusted in this situation and therefore 
+    it is more human-like. 
+    
     The third method needs to break a sentence into segments. 
-    We first use a model to sperate a sentence into segments and each segment has a 
-    resonable number of words, say like at most 10 words. 
-    The model for breaking down the sentance can be a statistical model or a rule-based model. 
-    When the speech synthesis system creates a speech, one speech is for a segment
-    but not for the whole sentence. This is to emulate the human understanding 
-    structure of a sentence. When we read a long sentence, we usually sperate it
-    into a few parts. The speration may be from conjunction words, punctuation marks,
-    a clause, or the meaning of a group of words. When we need to stop, we stop
-    at the end or current segment speech and restart at the next segment speech.
+    We first use a model to separate a sentence into segments and each segment 
+    has a reasonable number of words, say like at most 10 words. 
+    The model for breaking down the sentence can be a statistical model or a 
+    rule-based model. 
+    The speech synthesis system generates one speech to one segment instead of 
+    the whole sentence.
+    This is to emulate the human understanding structure of a sentence. 
+    When we read a long sentence, we usually separate it into a few parts. 
+    The separation rules may be from conjunction words, punctuation marks, 
+    a clause, or the meaning of a group of words. 
+    When we need to stop, we stop at the end of the current speaking segment 
+    and restart it back from the last segment. It is a good idea as we try to mimic
+    the human's behavior in the same situation.
 \end{problem}
 
 \pagebreak
