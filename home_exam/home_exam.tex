@@ -17,44 +17,41 @@
 
 \begin{document}
 
-\title{DT2112 home exam spring 2019}
+\title{DT2112 Home Exam Spring 2019}
 \author{Lin Chun Hung, chlin3@kth.se}
 \maketitle
 
 \section{Automatic speech recognition and human perception}
 \begin{problem}{1.1}
+    % parametrization
     A speech parametrization is for extracting the feature vectors or
     the speech parameter vectors from speech signal. In the speech parametrization,
     the mel-frequency cepstrum coefficients (MFCCs) are most likely used for
     representing a short term power spectrum of speech. The size of the
     feature vectors represented by MFC method is 39 typically.
-
     In HMM-based ASR, the speech parameter vectors is a series of observations
     for training the HMM models. Each HMM model corresponds to one word.
 
+    % acoustic models
     The acoustic model is a representation of the relationship between feature
     vectors (observations) and subphonemes (hidden states).
     Typically, each phoneme has three subphonemes. The Hidden Markov Model with
     Gaussian Mixture Models are used as the acoustic model in HMM-based ASR.
-
     The HMMs for different words are trained and we compare the model likelihoods
     by forward-backward algorithm for isolated words recognition. For continuous
     speech recognition, we join our word models with the silent state and use viterbi
     algorithm to decode words from speech.
 
+    % language models
     The language model is to provide the information about the priori probability
     of the word sequence $P(word)$. A language model is able to disambiguate between
     similar acoustics when combining linguistic knowledge and acoustic evidence.
-    % For example, "ice cream" and "I scream" can be disambiguated with the language
-    % model even though their pronunciation are the same.
-
     In HMM-based ASR, n-gram model is used as the language model and it is trained
     on millions of words of text.
 
     % an N-best list
     The N-Best list is a list contains N ranked possible decoding for the speech
     from the user.
-
     The reason why developers would like to get an N-best list as an ASR result
     is the top hypothesis may be erroneous and may not fit the content of a
     dialogue system and the correct hypothesis is often in the N-best list.
@@ -63,18 +60,22 @@
 
 
 \begin{problem}{1.2}
+    % parametrization
     For the speech parametrization, MFCC is based on human hearing perceptions or
     in other words is to mimic known variation of the critical bands of
     human ears to different frequencies. Human ears are more discriminative at
     lower pitch and less discriminative at higher pitch and therefore the mel
     filterbank varies linearly below 1kHz and logarithmically above 1kHz.
 
+    % acoustic models
     For the acoustic model, the hidden markov model considers the transition
     probability of a phoneme (state) to a phoneme or staying on one phoneme.
     It is in the same way as a proficient language user that understanding
     what a particular speech should sound like in relation to adjoining sounds.
     Humans would probabay understand a speech as a series of phonemes instead of
-    phonemes independently.
+    phonemes independently. Moreover, the topology of the hidden markov model 
+    for ASR allows retaining a state. It means that "Speech" and "Speeeech",
+    which humans consider equivalent, can fit the same word model well. 
 
     The language models gives the priori probability of a certain word in a
     particular context given the adjoining words. It is similar to how human
@@ -83,9 +84,11 @@
     of a certain language.
 
     Since human and machine make error, the best guess of a word or a sentence may
-    be erroneous. Human would perpare a list of guess of a speech and choose the
-    best fit word or sentence given the converstation content and the intention
-    of the speaker. The n-best lists can be considered as an imitation of this behavior.
+    be erroneous. 
+    Human would perpare a list of guess of a speech in their mind 
+    and choose the best fit word or sentence given the converstation context and 
+    the intention of the speaker. 
+    The n-best lists can be considered as an imitation of this behavior.
 \end{problem}
 
 \begin{problem}{1.3}
