@@ -239,15 +239,25 @@
     the reading system, the software just need to search the nearest time tag 
     before the pasue point and then resume it in the same way.
     This method is good because it is easy to understand and implement it.
-    The pause is human-like because it will be what we will do in the same 
-    situation.
+    The pause is not quite human-like because we will not pasue it like a playing
+    machine.
 
     The second suggestion is online re-synthesize the ending pharse 
     (the few words after receiving the pause command) and the 
     starting words (the few words before the puase point). The tone and the prosody
     will be adjusted in this situation and therefore it is more human-like.
 
-    % TODO
+    The third suggestion needs drop a sentence into segments. 
+    We first use a model to sperate a sentence into segments and each segment has a 
+    resonable number of words, say like at most 10 words. 
+    The model can be a statistical model or a rule-based model. 
+    When the speech synthesis system create a speech, one speech is for a segment
+    but not for the whole sentence. This is to emulate the human understanding 
+    structure of a sentence. When we read a long sentence, we usually sperate it
+    into a few parts. The speration may be from conjunction words, punctuation marks,
+    a clause, or the meaning of a group of words. When we need to stop, we stop
+    at the end or current segment speech and restart at the next segment speech.
+
 \end{problem}
 
 \pagebreak
