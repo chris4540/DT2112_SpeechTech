@@ -24,30 +24,34 @@
 \section{Automatic speech recognition and human perception}
 \begin{problem}{1.1}
     % parametrization
-    A speech parametrization is for extracting the feature vectors or
-    the speech parameter vectors from speech signal. In the speech parametrization,
-    the mel-frequency cepstrum coefficients (MFCCs) are most likely used for
-    representing a short term power spectrum of speech. The size of the
-    feature vectors represented by MFC method is 39 typically.
-    In HMM-based ASR, the speech parameter vectors is a series of observations
-    for training the HMM models. Each HMM model corresponds to one word.
+    A speech parametrization is for extracting the feature vectors or the speech
+    parameter vectors from the speech signal. 
+    In the speech parametrization,
+    the Mel-frequency cepstrum coefficients (MFCCs) are most likely used for 
+    representing a short term power spectrum of speech. 
+    The size of the feature vectors represented by the MFCC method is 39 typically.
+    In HMM-based ASR, the speech parameter vectors is a series of observations 
+    for training the HMM models. Each HMM model 
+    corresponds to one word.
 
     % acoustic models
-    The acoustic model is a representation of the relationship between feature
-    vectors (observations) and subphonemes (hidden states).
-    Typically, each phoneme has three subphonemes. The Hidden Markov Model with
-    Gaussian Mixture Models are used as the acoustic model in HMM-based ASR.
+    The acoustic model is a representation of the relationship between feature 
+    vectors (observations) and sub-phonemes (hidden states).
+    Typically, each phoneme has three sub-phonemes. 
+    The Hidden Markov Model with the Gaussian Mixture Models is used as 
+    the acoustic model in HMM-based ASR. 
     The HMMs for different words are trained and we compare the model likelihoods
-    by forward-backward algorithm for isolated words recognition. For continuous
-    speech recognition, we join our word models with the silent state and use viterbi
-    algorithm to decode words from speech.
+    by the forward-backward algorithm for isolated words recognition. 
+    For continuous speech recognition, we join our word models with the silent 
+    state and use the Viterbi algorithm to decode words from speech.
 
     % language models
-    The language model is to provide the information about the priori probability
-    of the word sequence $P(word)$. A language model is able to disambiguate between
-    similar acoustics when combining linguistic knowledge and acoustic evidence.
-    In HMM-based ASR, n-gram model is used as the language model and it is trained
-    on millions of words of text.
+    The language model is to provide information about the priori probability of
+    the word sequence $P(word)$. 
+    A language model is able to disambiguate between similar acoustics when 
+    combining linguistic knowledge and acoustic evidence.
+    In HMM-based ASR, n-gram model is used as the language model and 
+    it is trained on millions of words of text.
 
     % an N-best list
     The N-Best list is a list contains N ranked possible decoding for the speech
@@ -55,40 +59,44 @@
     The reason why developers would like to get an N-best list as an ASR result
     is the top hypothesis may be erroneous and may not fit the content of a
     dialogue system and the correct hypothesis is often in the N-best list.
-    Therefore, the N-best list can increase the robusness of a dialogue system.
+    Therefore, the N-best list can increase the robustness of a dialogue system.
 \end{problem}
 
 
 \begin{problem}{1.2}
     % parametrization
-    For the speech parametrization, MFCC is based on human hearing perceptions or
-    in other words is to mimic known variation of the critical bands of
-    human ears to different frequencies. Human ears are more discriminative at
-    lower pitch and less discriminative at higher pitch and therefore the mel
-    filterbank varies linearly below 1kHz and logarithmically above 1kHz.
+    For the speech parametrization, MFCC is based on human hearing perceptions 
+    or in other words is to mimic known variation of the critical bands of human 
+    ears to different frequencies. 
+    Human ears are more discriminative at a lower pitch and less discriminative 
+    at a higher pitch and therefore the Mel filterbank varies linearly below 1kHz
+    and logarithmically above 1kHz.
 
     % acoustic models
-    For the acoustic model, the hidden markov model considers the transition
-    probability of a phoneme (state) to a phoneme or staying on one phoneme.
-    It is in the same way as a proficient language user that understanding
-    what a particular speech should sound like in relation to adjoining sounds.
-    Humans would probabay understand a speech as a series of phonemes instead of
-    phonemes independently. Moreover, the topology of the hidden markov model 
-    for ASR allows retaining a state. It means that "Speech" and "Speeeech",
-    which humans consider equivalent, can fit the same word model well. 
+    For the acoustic model, the hidden Markov model considers the transition 
+    probability of a phoneme (state) to a phoneme or staying on one phoneme. 
+    It is in the same way as a proficient language user that understanding what
+    a particular speech should sound like in relation to adjoining sounds. 
+    Humans would probably understand a speech as a series of phonemes instead of 
+    phonemes independently. Moreover, the topology of the hidden Markov model 
+    for ASR allows retaining a state. 
+    It means that ”Speech” and ”Speeeech”, which humans consider equivalent, 
+    can fit the same word model well. 
 
-    The language models gives the priori probability of a certain word in a
-    particular context given the adjoining words. It is similar to how human
-    guess a homophone word since human can guess the word by the converstation
-    content and the regularity of the word based on the knowledge and understanding
-    of a certain language.
-
-    Since human and machine make error, the best guess of a word or a sentence may
-    be erroneous. 
-    Human would perpare a list of guess of a speech in their mind 
-    and choose the best fit word or sentence given the converstation context and 
-    the intention of the speaker. 
-    The n-best lists can be considered as an imitation of this behavior.
+    % language model
+    The language model gives the priori probability of a certain word in a 
+    particular context given the adjoining words. 
+    It is similar to how human guess a homophone word since humans guess 
+    the word by the conversation content and the regularity of the word based on
+    the knowledge and understanding of a certain language. 
+    
+    % N-list
+    Since human and machine make errors, the best guess of a word or a sentence 
+    may be erroneous. 
+    Humans would prepare a list of guess of a speech in their mind and choose 
+    the best-fit word or sentence given the conversation context and the intention 
+    of the speaker.
+    The N-best lists can be considered as an imitation of this behavior.
 \end{problem}
 
 \begin{problem}{1.3}
@@ -96,34 +104,34 @@
     % 1. The pitch of the speech
     % * signify questions
     % * emphasize the main point of the speech
-    The first way can affect our perception is the pitch of the speech. In English,
-    the pitch can indicate whether this word is a verb or a noun. The pitch
-    can indicate the main point of a sentence and signify it is a question. 
-    For example,
-    "You stole the book" with a high pitch at the end is a kind of question 
-    expecting an answer. Humans can easily understand this is a question but 
-    an automatic speech recognition (ASR) system would only translate it to 
-    a sentence if no grammatical cues. 
+    The first way can affect our perception is the pitch of the speech. 
+    In English, the pitch can indicate whether this word is a verb or a noun. 
+    The pitch can indicate the main point of a sentence and signify it is a question. 
+    For example, ”You stole the book” with a high pitch at the end is a kind of
+    question expecting an answer. 
+    Humans can easily understand this is a question but an automatic speech 
+    recognition (ASR) system would only translate it to a sentence if no 
+    grammatical cues. 
     
     % http://www.speech.kth.se/~rolf/gslt_papers/MustaphaSkiri.pdf
     % 2. The visual event.
     % * Eye gazing refer to physical thing and fit to the speech context.
     % * McGurk effect 
-    The second way is the visual event or the visual cue. Our eys gaze is a 
-    strong indicator and it can give information to the speech context. A simple
-    example is that one speaker say "Close the door please." and then eyes on that
-    door would give the location information of "the door". Another example is 
-    a girl say "The room is very cold." and she gazes at the windows. Human listener
-    can understand that the girl is asking if the listener can close the windows.
-    Humans can understand these visual cues but a ASR would not understand the
+    The second way is the visual event or the visual cue. 
+    Our eye gaze is a strong indicator and it can give information to the speech context. 
+    A simple example is that one speaker says ”Close the door please.” and 
+    his/her gaze would give the location information of the door. 
+    Another example is a girl say ”The room is very cold.” and she gazes at the windows. 
+    Humans can understand that the girl is asking if the listener can close the windows. 
+    Humans can understand these visual cues but an ASR would not understand the 
     context from the visual cues and just transcribe the speech to text.
 
-    The another example for the visual event affecting speech perception 
-    is the McGurk effect. This effect can be found when the speech sound does 
-    not match to the lip movement. For example, the audio is "ba" but the lip 
-    movement is "fa" and the McGurk effect takes place. Humans understand "fa"
-    sound in the last example but a ASR system understand it as "ba" sound since
-    the system just able to receive sounds.
+    Another example of the visual event affecting speech perception is the McGurk effect. 
+    This effect can be found when the speech sound does not match to the lip movement. 
+    For example, the audio is ”ba” but the lip movement is ”fa” and the McGurk effect 
+    takes place. 
+    Humans understand ”fa” sound in the last example but an ASR system understands
+    it as ”ba” sound since the system is just able to receive sounds.
 \end{problem}
 
 \pagebreak
