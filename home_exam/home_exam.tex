@@ -165,7 +165,6 @@
     to another unit.
     Therefore, unit selection synthesis is able to do the same thing that as
     diphone synthesis.
-
     The co-articulation is perfectly retained in the diphone or larger
     units.
     Therefore the unit selection synthesis can completely reproduce
@@ -183,9 +182,8 @@
     we have to annotate phonetic units correctly. However, the way to annotate
     phonetic units is case-by-case and it also depends on the context of the
     conversation.
-
-    For human speakers, it is a natual action for native speakers and it depends
-    on the knowledge to that language of the speakers.
+    For human speakers, speech reduction is a natual action for native speakers
+    and it depends on the knowledge of the speakers on that language.
 
     % hesitation
     For classical speech systhesis, it is hard to find any hesitations like
@@ -194,7 +192,6 @@
     selection synthesis, we can add an extra module to analyze which part of the
     sentence would easily have a pause or an "emmmm" and then add hesitations with
     a low frequency.
-
     To compare with human speakers, the hesitations in the speech systhesis system
     may not be very natural since the analysis module can go wrong. Another point
     is hesitations is closely related to the conversation context and therefore
@@ -206,15 +203,13 @@
     system "translates" text to speech programmatically. Also, the speech data in
     the database is from a group of professional speakers and the data has quality control.
     Therefore it is hard to find word repetition in unit selection synthesis.
-
     To add word repetition, we can add a module to consider where should have
     word repetition such as the main topic of the sentence or the difficult words
     in the sentence and then create word repetition in the systhesised speech according
     to the analysis result.
-
     In unit selection synthesis, the word repetition is expected as a rare event
     since the synthesized speech sounds like from a professional speaker and therefore
-    the word repetition phenomenon should not be very frequent.
+    the word repetition in the system should not be frequent.
 \end{problem}
 
 \begin{problem}{2.3}
@@ -222,19 +217,27 @@
     % go to the next section, and go back to last section. Also, at the end of a 
     % section and the end of the text book we should have a few seconds pause to 
     % indicate that this is the end of a section. 
-    When the system is going to stop,
-    the system should say a few more syllables or the unit for the system. It 
-    makes the system more human-like. The system can be suddenly stopped but it 
-    will be very unnatural to human listener. The system can stop at the end of 
-    the processing sentence. However, some sentences would be very long and the 
-    system cannot within a short period of time.
+    % When the system is going to stop,
+    % the system should say a few more syllables or the unit for the system. It 
+    % makes the system more human-like. The system can be suddenly stopped but it 
+    % will be very unnatural to human listener. The system can stop at the end of 
+    % the processing sentence. However, some sentences would be very long and the 
+    % system cannot within a short period of time.
 
-    When resuming speaking, go back to the begining of the sentence is a good 
-    choice since it gives the sense of integrity of the speech. Resuming at the 
-    point we stop is a little bit odd and strange to human. We can think that 
-    a human read out the speech would not simply starting from the word he/she stop.
-    A few word before the pause is sensible since most of the people will do it 
-    in the same way.
+    % When resuming speaking, go back to the begining of the sentence is a good 
+    % choice since it gives the sense of integrity of the speech. Resuming at the 
+    % point we stop is a little bit odd and strange to human. We can think that 
+    % a human read out the speech would not simply starting from the word he/she stop.
+    % A few word before the pause is sensible since most of the people will do it 
+    % in the same way.
+
+    There are three ways to stop and resume the book reading system. The system
+    can stop immediately, can stop few words later, or stop util a clause or 
+    a segment of a sentence is completed when it received the stop command. 
+
+    There are three cooresponding ways to resume the system. The system can restart
+    from the point it stopped, from a few word before the point it stopped, or
+    from the begining of the sentance where it stopped.    
 
     The first suggestion is to consider the syntheized speech as an audio file.
     We mark the information like the time tag of the sentence start 
@@ -245,22 +248,21 @@
     The pause is not quite human-like because we will not pasue it like a playing
     machine.
 
-    The second suggestion is online re-synthesize the ending pharse 
+    The second suggestion is to online re-synthesize the ending pharse 
     (the few words after receiving the pause command) and the 
     starting words (the few words before the puase point). The tone and the prosody
     will be adjusted in this situation and therefore it is more human-like.
 
-    The third suggestion needs drop a sentence into segments. 
+    The third method needs to break a sentence into segments. 
     We first use a model to sperate a sentence into segments and each segment has a 
     resonable number of words, say like at most 10 words. 
-    The model can be a statistical model or a rule-based model. 
-    When the speech synthesis system create a speech, one speech is for a segment
+    The model for breaking down the sentance can be a statistical model or a rule-based model. 
+    When the speech synthesis system creates a speech, one speech is for a segment
     but not for the whole sentence. This is to emulate the human understanding 
     structure of a sentence. When we read a long sentence, we usually sperate it
     into a few parts. The speration may be from conjunction words, punctuation marks,
     a clause, or the meaning of a group of words. When we need to stop, we stop
     at the end or current segment speech and restart at the next segment speech.
-
 \end{problem}
 
 \pagebreak
